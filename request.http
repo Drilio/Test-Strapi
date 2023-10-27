@@ -1,0 +1,64 @@
+GET http://localhost:1337/api/movies?filters[title][$startsWithi]=h
+Accept: application/json
+Content-Type: application/json
+Authorization: Bearer 53b36d24880ae5a0c3e77e3d7441dca03b0e6806b82c26c1676d4285fc8833febda7b52b1c4236a817f26bb49c3692a5432ae5cd58749b8c37cd6dff9f60ea79f410a58cecb251d87a11e8b939ea9c0390602fe65d9a7425218b582dd49b32588c01430d271c5e5c6f2e04d59b54ba72f39606eafcc3e8011461c7501ba9081f
+###
+PUT http://localhost:1337/api/actors/3
+Content-Type: application/json
+
+{
+  "data":{
+    "firstname":"Pom",
+    "lastname":"Banks"
+  }
+}
+###
+GET http://localhost:1337/api/actors
+Accept: application/json
+Content-Type: application/json
+Authorization: Bearer 53b36d24880ae5a0c3e77e3d7441dca03b0e6806b82c26c1676d4285fc8833febda7b52b1c4236a817f26bb49c3692a5432ae5cd58749b8c37cd6dff9f60ea79f410a58cecb251d87a11e8b939ea9c0390602fe65d9a7425218b582dd49b32588c01430d271c5e5c6f2e04d59b54ba72f39606eafcc3e8011461c7501ba9081f
+###
+POST http://localhost:1337/api/actors
+Accept: application/json
+Content-Type: application/json
+Authorization: Bearer 53b36d24880ae5a0c3e77e3d7441dca03b0e6806b82c26c1676d4285fc8833febda7b52b1c4236a817f26bb49c3692a5432ae5cd58749b8c37cd6dff9f60ea79f410a58cecb251d87a11e8b939ea9c0390602fe65d9a7425218b582dd49b32588c01430d271c5e5c6f2e04d59b54ba72f39606eafcc3e8011461c7501ba9081f
+
+{
+    "data":{
+        "firstname":"Tom",
+        "lastname" : "Hanks"
+    }
+}
+### 
+POST http://localhost:1337/api/movies
+content-type: application/json
+
+{
+  "data":{
+  "ReleaseDate": "1994-06-23",
+  "description": "The world will never be the same once you've seen it through the eyes of Forrest Gump.",
+  "title": "H Dabbour",
+  "actors": [3]
+}
+
+}
+###
+POST http://localhost:1337/api/auth/local
+Accept: application/json
+Content-Type: application/json
+
+{
+  
+    "identifier":"toto@gmail.com",
+    "password":"totoisgod"
+  
+}
+###
+GET http://localhost:1337/api/users/me
+Accept: application/json
+Content-Type: application/json
+Authorization: Bearer eyJhbGciOiJIUzI1NiIsInR5cCI6IkpXVCJ9.eyJpZCI6MSwiaWF0IjoxNjk4NDExNjc0LCJleHAiOjE3MDEwMDM2NzR9.QUlYpHQQb7t-odN3pvy4_bIPlx1WFT_kNgBIETwXXj8
+
+###
+
+GET https://api.themoviedb.org/3/movie/157336?api_key=971401e45cdeaa2392c2dee4b2f81054
